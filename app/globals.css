@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf7f2;
+  --foreground: #111111;
+
+  --white: #ffffff;
+
+  --mint: #bdf3d5;
+  --sky: #ddeeff;
+  --yellow: #ffe68b;
+  --pink: #ffd7e7;
+
+  --border: #111111;
+
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+
+  --shadow-card: 8px 8px 0px #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}

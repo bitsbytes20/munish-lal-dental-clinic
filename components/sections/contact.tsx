@@ -3,7 +3,7 @@ import {
   Phone,
   Mail,
   Clock3,
-  MessageCircle,
+  
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Container from "@/components/ui/container";
@@ -68,7 +68,7 @@ export default function Contact() {
           </span>
 
           <h2 className="mt-8 text-4xl font-bold text-slate-900 md:text-5xl">
-            We'd Love To Hear From You
+          We&apos;re here to help
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">

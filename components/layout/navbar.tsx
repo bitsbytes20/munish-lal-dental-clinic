@@ -56,13 +56,13 @@ export default function Navbar() {
               Call
             </a>
 
-            <a
-              href="https://wa.me/91XXXXXXXXXX"
-              className="flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2 text-white hover:bg-blue-700 transition"
-            >
-              <Calendar size={18} />
-              Book Appointment
-            </a>
+            <Link
+  href="#appointment"
+  className="flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2 text-white hover:bg-blue-700 transition"
+>
+  <Calendar size={18} />
+  Book Appointment
+</Link>
 
           </div>
 

@@ -5,7 +5,7 @@ import PatientJourney from "@/components/sections/patient-journey";
 import Treatments from "@/components/sections/treatments";
 import WhyChooseUs from "@/components/sections/why-choose-us";
 import Testimonials from "@/components/sections/testimonials";
-
+import AppointmentForm from "@/components/sections/appointment-form";
 import FAQ from "@/components/sections/faq";
 import CTA from "@/components/sections/cta";
 // import Contact from "@/components/sections/contact";
@@ -22,6 +22,7 @@ export default function Home() {
       <Testimonials/>
       <FAQ/>
       <CTA/>
+      <AppointmentForm />
       {/* <Contact/> */}
       <Footer/>
     </>

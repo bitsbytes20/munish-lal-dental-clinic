@@ -8,7 +8,7 @@ import Testimonials from "@/components/sections/testimonials";
 import AppointmentForm from "@/components/sections/appointment-form";
 import FAQ from "@/components/sections/faq";
 import CTA from "@/components/sections/cta";
-// import Contact from "@/components/sections/contact";
+import Contact from "@/components/sections/contact";
 import Footer from "@/components/sections/footer";
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
       <FAQ/>
       <CTA/>
       <AppointmentForm />
-      {/* <Contact/> */}
+      <Contact/>
       <Footer/>
     </>
   );

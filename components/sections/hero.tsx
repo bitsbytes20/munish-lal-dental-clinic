@@ -1,27 +1,7 @@
 import Image from "next/image";
-import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import { Phone, Calendar, Star, ArrowUpRight } from "lucide-react";
 
 import Container from "@/components/ui/container";
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-fraunces",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
-});
 
 const STATS = [
   { value: "20+", label: "Years in practice" },
@@ -107,83 +87,59 @@ export default function Hero() {
   const { next, upcoming } = getNextAvailability();
 
   return (
-    <section
-      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable} relative overflow-hidden bg-[#FAF9F5] py-24 font-[family-name:var(--font-inter)] lg:py-32`}
-    >
-      {/* Quiet clinical texture — restrained, not decorative for its own sake */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.35]"
-        style={{
-          backgroundImage:
-            "radial-gradient(#0B6E63 0.6px, transparent 0.6px)",
-          backgroundSize: "28px 28px",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-[-10%] top-1/3 h-[420px] w-[420px] rounded-full bg-[#0B6E63]/10 blur-[100px]"
-      />
-
+    <section className="bg-white py-24 lg:py-28">
       <Container>
-        <div className="relative grid items-center gap-20 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="relative grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           {/* LEFT */}
-          <div className="relative">
-            <div className="mb-8 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#0B6E63]" />
-              <span className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.3em] text-[#0B6E63]">
-                Bareilly &middot; General &amp; Cosmetic Dentistry
-              </span>
-            </div>
+          <div>
+            <span className="rounded-full bg-teal-100 px-5 py-2 text-sm font-semibold text-teal-700">
+              Bareilly &middot; General &amp; Cosmetic Dentistry
+            </span>
 
-            <h1 className="font-[family-name:var(--font-fraunces)] text-[clamp(2.75rem,6vw,5rem)] font-medium leading-[1.04] text-[#142621]">
-              Care, crafted
-              <br />
-              for every{" "}
-              <span className="italic text-[#0B6E63]">smile</span>.
+            <h1 className="mt-8 text-4xl font-bold leading-tight text-slate-900 md:text-6xl">
+              Care, crafted for every{" "}
+              <span className="text-teal-700">smile</span>.
             </h1>
 
-            <p className="mt-8 max-w-md text-lg leading-8 text-[#142621]/65">
-              Dr. Munish Lal and team provide gentle, modern dental
-              care for every member of your family &mdash; built on
-              two decades of trust in Bareilly.
+            <p className="mt-6 max-w-md text-lg leading-8 text-slate-600">
+              Dr. Munish Lal and team provide gentle, modern dental care for
+              every member of your family &mdash; built on two decades of
+              trust in Bareilly.
             </p>
 
-         <div className="mt-10 flex flex-wrap items-center gap-4">
-  <a
-    href="#appointment"
-    className="group inline-flex items-center gap-2 rounded-full bg-[#0B6E63] px-7 py-4 text-sm font-medium text-[#FAF9F5] transition-colors hover:bg-[#073F3A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B6E63]"
-  >
-    <Calendar size={17} />
-    Book an appointment
-    <ArrowUpRight
-      size={15}
-      className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-    />
-  </a>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="#appointment"
+                className="group inline-flex items-center gap-2 rounded-full bg-teal-700 px-7 py-4 text-sm font-semibold text-white transition hover:bg-teal-800"
+              >
+                <Calendar size={17} />
+                Book an appointment
+                <ArrowUpRight
+                  size={15}
+                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </a>
 
-  <a
-    href="tel:+919259032949"
-    className="inline-flex items-center gap-2 rounded-full border border-[#142621]/15 px-7 py-4 text-sm font-medium text-[#142621] transition-colors hover:border-[#142621]/30 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B6E63]"
-  >
-    <Phone size={17} />
-    Call the clinic
-  </a>
-</div>
+              <a
+                href="tel:+919259032949"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-7 py-4 text-sm font-semibold text-slate-900 transition hover:border-teal-600 hover:bg-teal-50 hover:text-teal-700"
+              >
+                <Phone size={17} />
+                Call the clinic
+              </a>
+            </div>
 
-            {/* Stats — hairline-divided, mono numerals instead of icon tiles */}
-            <div className="mt-16 flex divide-x divide-[#142621]/10 border-t border-[#142621]/10 pt-8">
+            {/* Stats */}
+            <div className="mt-16 flex divide-x divide-slate-200 border-t border-slate-200 pt-8">
               {STATS.map((stat, i) => (
                 <div
                   key={stat.label}
                   className={`flex-1 ${i === 0 ? "pr-6" : i === STATS.length - 1 ? "pl-6" : "px-6"}`}
                 >
-                  <p className="font-[family-name:var(--font-mono)] text-3xl font-medium tabular-nums text-[#142621]">
+                  <p className="text-3xl font-bold tabular-nums text-slate-900">
                     {stat.value}
                   </p>
-                  <p className="mt-1 text-sm text-[#142621]/55">
-                    {stat.label}
-                  </p>
+                  <p className="mt-1 text-sm text-slate-600">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -191,8 +147,8 @@ export default function Hero() {
 
           {/* RIGHT */}
           <div className="relative mx-auto max-w-md lg:mx-0">
-            <div className="relative rounded-[2rem] border border-[#0B6E63]/10 bg-white p-3 shadow-[0_30px_60px_-15px_rgba(11,110,99,0.18)]">
-              <div className="overflow-hidden rounded-[1.5rem] bg-[#E6F1EC]">
+            <div className="relative rounded-3xl border border-slate-200 bg-white p-3 shadow-2xl">
+              <div className="overflow-hidden rounded-2xl bg-teal-50">
                 <Image
                   src="/images/doctor.jpg"
                   alt="Dr. Munish Lal, BDS, at the clinic"
@@ -203,50 +159,41 @@ export default function Hero() {
                 />
               </div>
 
-              <span
-                aria-hidden
-                className="absolute -left-3 -top-3 h-8 w-8 rounded-full border-4 border-[#FAF9F5] bg-[#C7A468]"
-              />
-
-              {/* Understated rating badge — replaces the oversized floating card */}
-              <div className="absolute -right-4 top-7 flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 shadow-lg ring-1 ring-black/5">
-                <div className="flex text-[#C7A468]">
+              {/* Rating badge */}
+              <div className="absolute -right-4 top-7 flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 shadow-lg ring-1 ring-slate-200">
+                <div className="flex text-amber-400">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={11} fill="currentColor" strokeWidth={0} />
                   ))}
                 </div>
-                <span className="font-[family-name:var(--font-mono)] text-xs font-medium text-[#142621]">
-                  4.9
-                </span>
+                <span className="text-xs font-semibold text-slate-900">4.9</span>
               </div>
             </div>
 
-            {/* Signature element: appointment "ticket" stub, driven by real clinic hours */}
-            <div className="relative mx-6 -mt-6 rounded-2xl bg-[#0B6E63] px-6 py-5 text-[#FAF9F5] shadow-xl">
+            {/* Appointment "ticket" stub, driven by real clinic hours */}
+            <div className="relative mx-6 -mt-6 rounded-2xl bg-teal-700 px-6 py-5 text-white shadow-xl">
               <span
                 aria-hidden
-                className="absolute -left-3 top-1/2 h-6 w-6 -translate-y-1/2 rounded-full bg-[#FAF9F5]"
+                className="absolute -left-3 top-1/2 h-6 w-6 -translate-y-1/2 rounded-full bg-white"
               />
               <span
                 aria-hidden
-                className="absolute -right-3 top-1/2 h-6 w-6 -translate-y-1/2 rounded-full bg-[#FAF9F5]"
+                className="absolute -right-3 top-1/2 h-6 w-6 -translate-y-1/2 rounded-full bg-white"
               />
 
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-[0.25em] text-[#DCEEE9]/80">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-teal-100">
                     Next available
                   </p>
-                  <p className="mt-1 font-[family-name:var(--font-fraunces)] text-xl">
-                    {next}
-                  </p>
+                  <p className="mt-1 text-xl font-bold">{next}</p>
                 </div>
-                <Calendar size={20} className="text-[#C7A468]" />
+                <Calendar size={20} className="text-teal-100" />
               </div>
 
               <div className="my-4 border-t border-dashed border-white/25" />
 
-              <div className="flex flex-wrap gap-2 font-[family-name:var(--font-mono)] text-[11px]">
+              <div className="flex flex-wrap gap-2 text-[11px] font-medium">
                 {upcoming.map((slot) => (
                   <span
                     key={slot}
@@ -258,7 +205,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <p className="mt-6 text-center text-sm text-[#142621]/50 lg:text-left">
+            <p className="mt-6 text-center text-sm text-slate-500 lg:text-left">
               Dr. Munish Lal &middot; BDS, General &amp; Cosmetic Dentistry
             </p>
           </div>

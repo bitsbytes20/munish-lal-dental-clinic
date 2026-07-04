@@ -117,18 +117,22 @@ export default function AppointmentForm() {
     });
 
     const lines = [
-      "🦷 *New Appointment Request*",
-      "",
-      `👤 Name: ${form.name}`,
-      `📞 Phone: ${form.phone}`,
-      `🦷 Treatment: ${form.treatment}`,
-      `📅 Preferred Date: ${dateLabel}`,
-      `🕒 Preferred Time: ${form.time}`,
-      "",
-      form.message ? `💬 Message:\n${form.message}` : "",
-      "",
-      "Thank you.",
-    ].filter(Boolean);
+  "🦷 *Dr. Munish Lal Dental Clinic*",
+  "",
+  "*New Appointment Request*",
+  "",
+  `👤 Patient: ${form.name}`,
+  `📞 Phone: ${form.phone}`,
+  `🦷 Treatment: ${form.treatment}`,
+  `📅 Date: ${dateLabel}`,
+  `🕒 Time: ${form.time}`,
+];
+
+if (form.message.trim()) {
+  lines.push("", `💬 Notes: ${form.message}`);
+}
+
+lines.push("", "Please confirm the appointment.");
 
     const text = encodeURIComponent(lines.join("\n"));
     window.open(`https://wa.me/${CLINIC_WHATSAPP_NUMBER}?text=${text}`, "_blank");

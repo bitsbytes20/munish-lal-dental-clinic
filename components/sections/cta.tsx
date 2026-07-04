@@ -1,134 +1,47 @@
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock3,
-  MessageCircle,
-} from "lucide-react";
-
+import { CalendarDays, Phone } from "lucide-react";
 import Container from "@/components/ui/container";
 
-const contactCards = [
-  {
-    icon: MapPin,
-    title: "Visit Our Clinic",
-    description: `Anand Ashram Road
-Opposite Mental Hospital
-Civil Lines
-Bareilly, Uttar Pradesh 243005`,
-    link: "https://maps.google.com",
-    button: "Get Directions",
-  },
-  {
-    icon: Phone,
-    title: "Call Us",
-    description: "+91 92590 32949",
-    link: "tel:+919259032949",
-    button: "Call Now",
-  },
-  {
-    icon: MessageCircle,
-    title: "WhatsApp",
-    description: "+91 92590 32949",
-    link: "https://wa.me/919259032949",
-    button: "Chat Now",
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    description: "bitsbytes2006@gmail.com",
-    link: "mailto:bitsbytes2006@gmail.com",
-    button: "Send Email",
-  },
-  {
-    icon: Clock3,
-    title: "Clinic Hours",
-    description: `Monday – Saturday
-
-10:00 AM – 1:00 PM
-
-3:00 PM – 7:00 PM
-
-Sunday : Closed`,
-  },
-];
-
-export default function Contact() {
+export default function CTA() {
   return (
-    <section
-      id="contact"
-      className="bg-[#FAF8F5] py-28"
-    >
+    <section className="bg-white py-28">
       <Container>
+        <div className="overflow-hidden rounded-[40px] bg-gradient-to-r from-teal-700 to-teal-600 px-8 py-20 text-center text-white shadow-2xl md:px-16">
 
-        <div className="mx-auto max-w-3xl text-center">
-
-          <span className="rounded-full bg-teal-100 px-5 py-2 font-semibold text-teal-700">
-            Contact Us
+          <span className="rounded-full bg-white/20 px-5 py-2 text-sm font-semibold backdrop-blur">
+            Book Your Visit Today
           </span>
 
-          <h2 className="mt-8 text-4xl font-bold text-slate-900 md:text-5xl">
-         We&#39;d Love To Hear From You
+          <h2 className="mx-auto mt-8 max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
+            Smile With Confidence Again.
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600">
-            Have a question or need dental care? Reach out to us through any of
-            the options below. Our team is always happy to help.
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-teal-50">
+            Whether you need a routine check-up, cosmetic dentistry, dental
+            implants or emergency treatment, our experienced team is here to
+            provide comfortable and personalized care.
           </p>
 
-        </div>
+          <div className="mt-12 flex flex-col justify-center gap-5 sm:flex-row">
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <a
+              href="#appointment"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 font-semibold text-teal-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <CalendarDays size={20} />
+              Book Appointment
+            </a>
 
-          {contactCards.map((item, index) => {
-            const Icon = item.icon;
+            <a
+              href="tel:+919259032949"
+              className="inline-flex items-center justify-center gap-3 rounded-full border border-white/40 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-teal-700"
+            >
+              <Phone size={20} />
+              Call Now
+            </a>
 
-            return (
-              <div
-                key={index}
-                className="group rounded-3xl bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-100 text-teal-700 transition-all duration-300 group-hover:bg-teal-700 group-hover:text-white">
-                  <Icon size={30} />
-                </div>
-
-                <h3 className="mt-8 text-2xl font-bold text-slate-900">
-                  {item.title}
-                </h3>
-
-                <p className="mt-5 whitespace-pre-line leading-8 text-slate-600">
-                  {item.description}
-                </p>
-
-                {item.link && (
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-8 inline-block font-semibold text-teal-700 transition-all hover:translate-x-2"
-                  >
-                    {item.button} →
-                  </a>
-                )}
-              </div>
-            );
-          })}
+          </div>
 
         </div>
-
-        <div className="mt-20 overflow-hidden rounded-[32px] shadow-xl">
-
-          <iframe
-            title="Clinic Location"
-            src="https://www.google.com/maps?q=Anand+Ashram+Road,+Civil+Lines,+Bareilly,+Uttar+Pradesh+243005&output=embed"
-            width="100%"
-            height="450"
-            loading="lazy"
-            className="border-0"
-          />
-
-        </div>
-
       </Container>
     </section>
   );

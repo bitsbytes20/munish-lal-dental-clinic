@@ -82,9 +82,9 @@ export default function Testimonials() {
 
               </div>
 
-              <p className="leading-8 text-slate-600">
-                "{item.review}"
-              </p>
+           <p className="leading-8 text-slate-600">
+  &ldquo;{item.review}&rdquo;
+</p>
 
               <div className="mt-8">
 

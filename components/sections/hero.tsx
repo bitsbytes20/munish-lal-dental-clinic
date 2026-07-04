@@ -149,27 +149,27 @@ export default function Hero() {
               two decades of trust in Bareilly.
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                href="#contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-[#0B6E63] px-7 py-4 text-sm font-medium text-[#FAF9F5] transition-colors hover:bg-[#073F3A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B6E63]"
-              >
-                <Calendar size={17} />
-                Book an appointment
-                <ArrowUpRight
-                  size={15}
-                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </a>
+         <div className="mt-10 flex flex-wrap items-center gap-4">
+  <a
+    href="#appointment"
+    className="group inline-flex items-center gap-2 rounded-full bg-[#0B6E63] px-7 py-4 text-sm font-medium text-[#FAF9F5] transition-colors hover:bg-[#073F3A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B6E63]"
+  >
+    <Calendar size={17} />
+    Book an appointment
+    <ArrowUpRight
+      size={15}
+      className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+    />
+  </a>
 
-              <a
-                href="tel:+91XXXXXXXXXX"
-                className="inline-flex items-center gap-2 rounded-full border border-[#142621]/15 px-7 py-4 text-sm font-medium text-[#142621] transition-colors hover:border-[#142621]/30 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B6E63]"
-              >
-                <Phone size={17} />
-                Call the clinic
-              </a>
-            </div>
+  <a
+    href="tel:+919259032949"
+    className="inline-flex items-center gap-2 rounded-full border border-[#142621]/15 px-7 py-4 text-sm font-medium text-[#142621] transition-colors hover:border-[#142621]/30 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B6E63]"
+  >
+    <Phone size={17} />
+    Call the clinic
+  </a>
+</div>
 
             {/* Stats — hairline-divided, mono numerals instead of icon tiles */}
             <div className="mt-16 flex divide-x divide-[#142621]/10 border-t border-[#142621]/10 pt-8">

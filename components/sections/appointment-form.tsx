@@ -359,7 +359,7 @@ export default function AppointmentForm() {
                 style={{ fontFamily: "'Inter', sans-serif", color: "#9A9F9C" }}
               >
                Your appointment request will be reviewed by our staff.
-We'll confirm your appointment or suggest another suitable time through WhatsApp or phone.
+We&apos;ll confirm your appointment or suggest another suitable time through WhatsApp or phone.
               </p>
             </div>
           </div>

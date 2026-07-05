@@ -189,7 +189,7 @@ export default function AppointmentForm() {
               <Field label="Full Name" icon={User} error={errors.name}>
                 <input
                   type="text"
-                  placeholder="e.g. Aman Kumar"
+                  placeholder="e.g. Virat Kohli"
                   value={form.name}
                   onChange={(e) => update("name", e.target.value)}
                   className={inputClass(errors.name)}

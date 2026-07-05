@@ -12,10 +12,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className=" scroll-mt-24 bg-gradient-to-b from-[var(--background)] to-white py-28"
+      className=" scroll-mt-24 overflow-x-hidden bg-gradient-to-b from-[var(--background)] to-white py-16 md:py-24 lg:py-28"
     >
       <Container>
-        <div className="grid items-center gap-20 lg:grid-cols-2">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
 
           {/* Left */}
 
@@ -23,7 +23,7 @@ export default function About() {
 
             {/* Decorative Background */}
 
-            <div className="absolute -left-10 -top-10 h-60 w-60 rounded-full bg-[var(--teal-light)] opacity-40 blur-3xl" />
+            <div className="absolute -left-6 -top-6 h-32 w-32 rounded-full bg-[var(--teal-light)] opacity-40 blur-3xl sm:-left-10 sm:-top-10 sm:h-60 sm:w-60" />
 
             <div className="relative overflow-hidden rounded-[36px] shadow-xl group">
 
@@ -51,19 +51,19 @@ export default function About() {
 
             {/* Heading */}
 
-            <h2 className="mt-8 font-heading text-5xl font-semibold leading-tight text-[var(--foreground)]">
+            <h2 className="mt-6 font-heading text-3xl font-semibold leading-tight text-[var(--foreground)] sm:mt-8 sm:text-4xl lg:text-5xl">
               Dr. Munish Lal
             </h2>
 
             {/* Subtitle */}
 
-            <p className="mt-3 text-lg font-semibold text-[var(--teal)]">
+            <p className="mt-3 text-base font-semibold text-[var(--teal)] sm:text-lg">
               BDS • General & Cosmetic Dentistry
             </p>
 
             {/* Description */}
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600">
+            <p className="mt-6 max-w-xl text-base leading-7 text-gray-600 sm:mt-8 sm:text-lg sm:leading-8">
               With more than two decades of clinical experience,
               Dr. Munish Lal has helped thousands of patients
               achieve healthier, brighter smiles through gentle,
@@ -74,7 +74,7 @@ export default function About() {
 
             {/* Highlights */}
 
-            <div className="mt-10 grid gap-6">
+            <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6">
 
               <div className="flex items-center gap-4 rounded-2xl border border-black/5 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
 

@@ -139,26 +139,26 @@ export default function AppointmentForm() {
   }
 
   return (
-    <section id="appointment" className="bg-[#FAF8F5] py-28">
+    <section id="appointment" className="bg-[#FAF8F5] py-16 md:py-24 lg:py-28">
       <Container>
-        <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-16">
           {/* ---------------- LEFT: context ---------------- */}
           <div>
             <span className="rounded-full bg-teal-100 px-5 py-2 font-semibold text-teal-700">
               Book Appointment
             </span>
 
-            <h2 className="mt-8 text-4xl font-bold text-slate-900 md:text-5xl">
+            <h2 className="mt-6 text-3xl font-bold text-slate-900 sm:mt-8 sm:text-4xl md:text-5xl">
               Reserve Your Visit, Confirmed on WhatsApp
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+            <p className="mt-5 text-base leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
               Request your preferred date and time below. Our staff will confirm
               your appointment over WhatsApp or phone once the doctor&apos;s
               availability is checked — usually within working hours.
             </p>
 
-            <div className="mt-10 space-y-6">
+            <div className="mt-8 space-y-5 sm:mt-10 sm:space-y-6">
               {FEATURES.map(({ icon: Icon, title, body }) => (
                 <div key={title} className="flex items-start gap-4">
                   <div className="inline-flex shrink-0 rounded-2xl bg-teal-100 p-3 text-teal-700">
@@ -174,7 +174,7 @@ export default function AppointmentForm() {
           </div>
 
           {/* ---------------- RIGHT: booking card ---------------- */}
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-2xl md:p-10">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-2xl sm:p-8 md:p-10">
             <div className="mb-8 flex items-center gap-3">
               <div className="inline-flex rounded-2xl bg-teal-100 p-3 text-teal-700">
                 <Stethoscope size={22} />
@@ -221,7 +221,7 @@ export default function AppointmentForm() {
                 </select>
               </Field>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Field label="Preferred Date" icon={Calendar} error={errors.date}>
                   <input
                     type="date"

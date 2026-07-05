@@ -24,7 +24,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-white py-28">
+    <section className="bg-white py-16 md:py-24 lg:py-28">
       <Container>
 
         <div className="mx-auto max-w-3xl text-center">
@@ -33,19 +33,19 @@ export default function Testimonials() {
             Testimonials
           </span>
 
-          <h2 className="mt-8 text-4xl font-bold text-slate-900 md:text-5xl">
+          <h2 className="mt-6 text-3xl font-bold text-slate-900 sm:mt-8 sm:text-4xl md:text-5xl">
             Loved by Patients,
             <span className="text-teal-700"> Trusted by Families</span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600">
+          <p className="mt-5 text-base leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
             Our greatest achievement is the confidence and smiles of our
             patients.
           </p>
 
         </div>
 
-        <div className="mt-16 flex items-center justify-center gap-2">
+        <div className="mt-10 flex items-center justify-center gap-2 sm:mt-16">
 
           {[1,2,3,4,5].map((_, index) => (
             <Star
@@ -61,13 +61,13 @@ export default function Testimonials() {
 
         </div>
 
-        <div className="mt-20 grid gap-8 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:mt-16 sm:gap-8 lg:mt-20 lg:grid-cols-3">
 
           {testimonials.map((item, index) => (
 
             <div
               key={index}
-              className="rounded-3xl border border-slate-200 bg-[#FAF8F5] p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="rounded-3xl border border-slate-200 bg-[#FAF8F5] p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl sm:p-8"
             >
 
               <div className="mb-6 flex">

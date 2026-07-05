@@ -50,7 +50,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="bg-[#FAF8F5] py-28">
+    <section id="why-us" className=" scroll-mt-24 bg-[#FAF8F5] py-28">
       <Container>
 
         <div className="mx-auto max-w-3xl text-center">

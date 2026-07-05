@@ -82,16 +82,16 @@ export default function Navbar() {
       }`}
     >
       <Container>
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-16 items-center justify-between sm:h-20">
 
           {/* Logo */}
 
           <Link href="#" className="flex flex-col" onClick={closeMenu}>
-            <span className="text-2xl font-bold tracking-tight">
+            <span className="text-lg font-bold tracking-tight sm:text-2xl">
               Munish Lal
             </span>
 
-            <span className="text-sm uppercase tracking-[0.15em] text-gray-500">
+            <span className="text-xs uppercase tracking-[0.1em] text-gray-500 sm:text-sm sm:tracking-[0.15em]">
               Dental Clinic
             </span>
           </Link>

@@ -66,7 +66,7 @@ export default function Treatments() {
   return (
     <section
       id="treatments"
-      className=" scroll-mt-24 bg-[#FAF8F5] py-28"
+      className=" scroll-mt-24 bg-[#FAF8F5] py-16 md:py-24 lg:py-28"
     >
       <Container>
         <div className="mx-auto max-w-3xl text-center">
@@ -75,11 +75,11 @@ export default function Treatments() {
             Our Treatments
           </span>
 
-          <h2 className="mt-8 text-4xl font-bold text-slate-900 md:text-5xl">
+          <h2 className="mt-6 text-3xl font-bold text-slate-900 sm:mt-8 sm:text-4xl md:text-5xl">
             Complete Dental Care Under One Roof
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600">
+          <p className="mt-5 text-base leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
             From preventive dentistry to advanced oral surgery and cosmetic
             smile enhancement, we provide comprehensive dental solutions using
             modern technology and personalized care.
@@ -87,7 +87,7 @@ export default function Treatments() {
 
         </div>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:mt-16 sm:gap-8 md:grid-cols-2 lg:mt-20 lg:grid-cols-4">
 
           {treatments.map((item, index) => {
             const Icon = item.icon;
@@ -95,7 +95,7 @@ export default function Treatments() {
             return (
               <div
                 key={index}
-                className="group rounded-3xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:border-teal-600 hover:shadow-2xl"
+                className="group rounded-3xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-teal-600 hover:shadow-2xl sm:p-8"
               >
                 <div className="inline-flex rounded-2xl bg-teal-100 p-4 text-teal-700 transition-all duration-300 group-hover:bg-teal-700 group-hover:text-white">
                   <Icon size={30} />

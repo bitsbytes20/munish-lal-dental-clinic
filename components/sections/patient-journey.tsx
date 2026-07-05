@@ -32,33 +32,33 @@ const steps = [
 
 export default function PatientJourney() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 md:py-24">
       <Container>
         <div className="text-center">
           <span className="rounded-full bg-teal-100 px-5 py-2 text-sm font-semibold text-teal-700">
             Your Journey
           </span>
 
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold text-slate-900">
+          <h2 className="mt-5 text-3xl sm:mt-6 sm:text-4xl md:text-5xl font-bold text-slate-900">
             Your Dental Care in
             <span className="text-teal-700"> 4 Simple Steps</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
             From requesting your appointment to achieving a healthy smile, we
             ensure every step is comfortable, transparent, and focused on your
             care.
           </p>
         </div>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:mt-16 sm:gap-8 md:grid-cols-2 lg:mt-20 lg:grid-cols-4">
           {steps.map((step, index) => {
             const Icon = step.icon;
 
             return (
               <div
                 key={index}
-                className="group rounded-3xl border border-slate-200 bg-[#FAF8F5] p-8 transition-all duration-300 hover:-translate-y-2 hover:border-teal-700 hover:shadow-2xl"
+                className="group rounded-3xl border border-slate-200 bg-[#FAF8F5] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-teal-700 hover:shadow-2xl sm:p-8"
               >
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-700 text-white transition-transform duration-300 group-hover:scale-110">
                   <Icon size={30} />

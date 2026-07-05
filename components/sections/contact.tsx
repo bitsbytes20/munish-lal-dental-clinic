@@ -57,7 +57,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[#FAF8F5] py-28"
+      className="bg-[#FAF8F5] py-16 md:py-24 lg:py-28"
     >
       <Container>
 
@@ -67,18 +67,18 @@ export default function Contact() {
             Contact Us
           </span>
 
-          <h2 className="mt-8 text-4xl font-bold text-slate-900 md:text-5xl">
+          <h2 className="mt-6 text-3xl font-bold text-slate-900 sm:mt-8 sm:text-4xl md:text-5xl">
           We&apos;re here to help
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600">
+          <p className="mt-5 text-base leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
             Have a question or need dental care? Reach out to us through any of
             the options below. Our team is always happy to help.
           </p>
 
         </div>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:mt-16 sm:gap-8 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
 
           {contactCards.map((item, index) => {
             const Icon = item.icon;
@@ -86,17 +86,17 @@ export default function Contact() {
             return (
               <div
                 key={index}
-                className="group rounded-3xl bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                className="group rounded-3xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl sm:p-8"
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-100 text-teal-700 transition-all duration-300 group-hover:bg-teal-700 group-hover:text-white">
-                  <Icon size={30} />
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-100 text-teal-700 transition-all duration-300 group-hover:bg-teal-700 group-hover:text-white sm:h-16 sm:w-16">
+                  <Icon size={26} />
                 </div>
 
-                <h3 className="mt-8 text-2xl font-bold text-slate-900">
+                <h3 className="mt-6 text-xl font-bold text-slate-900 sm:mt-8 sm:text-2xl">
                   {item.title}
                 </h3>
 
-                <p className="mt-5 whitespace-pre-line leading-8 text-slate-600">
+                <p className="mt-4 whitespace-pre-line text-sm leading-7 text-slate-600 sm:mt-5 sm:text-base sm:leading-8">
                   {item.description}
                 </p>
 
@@ -116,15 +116,15 @@ export default function Contact() {
 
         </div>
 
-        <div className="mt-20 overflow-hidden rounded-[32px] shadow-xl">
+        <div className="mt-12 overflow-hidden rounded-[24px] shadow-xl sm:mt-16 sm:rounded-[32px] lg:mt-20">
 
           <iframe
             title="Clinic Location"
             src="https://www.google.com/maps?q=Anand+Ashram+Road,+Civil+Lines,+Bareilly,+Uttar+Pradesh+243005&output=embed"
             width="100%"
-            height="450"
+            height="320"
             loading="lazy"
-            className="border-0"
+            className="h-[320px] w-full border-0 sm:h-[450px]"
           />
 
         </div>

@@ -19,13 +19,13 @@ export default function Footer() {
 
       <Container>
 
-        <div className="grid gap-12 py-20 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 py-14 sm:gap-12 md:grid-cols-2 md:py-20 lg:grid-cols-5">
 
           {/* Brand */}
 
           <div>
 
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-2xl font-bold sm:text-3xl">
               Dr. Munishlal Dental Clinic
             </h2>
 

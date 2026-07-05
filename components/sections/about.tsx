@@ -12,7 +12,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-gradient-to-b from-[var(--background)] to-white py-28"
+      className=" scroll-mt-24 bg-gradient-to-b from-[var(--background)] to-white py-28"
     >
       <Container>
         <div className="grid items-center gap-20 lg:grid-cols-2">

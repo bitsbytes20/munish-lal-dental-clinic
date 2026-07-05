@@ -66,7 +66,7 @@ export default function Treatments() {
   return (
     <section
       id="treatments"
-      className="bg-[#FAF8F5] py-28"
+      className=" scroll-mt-24 bg-[#FAF8F5] py-28"
     >
       <Container>
         <div className="mx-auto max-w-3xl text-center">

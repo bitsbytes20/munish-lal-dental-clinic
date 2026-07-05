@@ -41,7 +41,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#FAF8F5] py-16 md:py-24 lg:py-28">
+    <section id="faq" className="scroll-mt-24 bg-[#FAF8F5] py-16 md:py-24 lg:py-28">
       <Container>
 
         <div className="mx-auto max-w-3xl text-center">

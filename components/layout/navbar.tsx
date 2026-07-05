@@ -34,6 +34,30 @@ export default function Navbar() {
 
   const closeMenu = () => setIsOpen(false);
 
+  // Closes the mobile menu first, then scrolls to the target once the
+  // dropdown's collapse animation has finished. Doing both at once causes
+  // the browser to calculate the scroll offset mid-animation, landing
+  // somewhere in the middle of the section instead of at its top.
+  const handleMobileNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    setIsOpen(false);
+
+    const scrollToTarget = () => {
+      if (href === "#") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      const target = document.querySelector(href);
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    // Matches the dropdown's transition duration (duration-300)
+    window.setTimeout(scrollToTarget, 320);
+  };
+
   // Header background/shadow state on scroll
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 8);
@@ -176,7 +200,7 @@ active:scale-95"
                   <Link
                     key={item.name}
                     href={item.href}
-                    onClick={closeMenu}
+                    onClick={(e) => handleMobileNavClick(e, item.href)}
                     className={`rounded-xl px-4 py-3 text-base font-medium transition-all duration-300 hover:bg-[var(--teal)] hover:text-white ${
                       isActive ? "bg-[var(--teal-light)] text-[var(--teal)]" : "text-gray-800"
                     }`}
@@ -190,7 +214,7 @@ active:scale-95"
 
                 <Link
                   href="#appointment"
-                  onClick={closeMenu}
+                  onClick={(e) => handleMobileNavClick(e, "#appointment")}
                   className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--teal)] px-5 py-3 text-white transition-all duration-300
 hover:scale-[1.02]
 hover:bg-[var(--teal-dark)]

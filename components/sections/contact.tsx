@@ -57,7 +57,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[#FAF8F5] py-16 md:py-24 lg:py-28"
+      className="scroll-mt-24 bg-[#FAF8F5] py-16 md:py-24 lg:py-28"
     >
       <Container>
 

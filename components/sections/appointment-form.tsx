@@ -139,7 +139,7 @@ export default function AppointmentForm() {
   }
 
   return (
-    <section id="appointment" className="bg-[#FAF8F5] py-16 md:py-24 lg:py-28">
+    <section id="appointment" className="scroll-mt-24 bg-[#FAF8F5] py-16 md:py-24 lg:py-28">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-16">
           {/* ---------------- LEFT: context ---------------- */}

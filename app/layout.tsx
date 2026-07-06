@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
+import WhatsAppButton from "@/components/floating/whatsapp-button";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
@@ -25,11 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     <body
-  className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
->
-   <Navbar />
+      <body
+        className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+      >
+        <Navbar />
+
         {children}
+
+        <WhatsAppButton />
       </body>
     </html>
   );

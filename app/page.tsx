@@ -10,12 +10,14 @@ import FAQ from "@/components/sections/faq";
 import CTA from "@/components/sections/cta";
 import Contact from "@/components/sections/contact";
 import Footer from "@/components/sections/footer";
+import Stats from "@/components/sections/stats";
 
 export default function Home() {
   return (
     <>
   
       <Hero />
+      <Stats/>
       <About />
       <PatientJourney />
       <Treatments />

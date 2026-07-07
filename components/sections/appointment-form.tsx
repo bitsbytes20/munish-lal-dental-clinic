@@ -137,7 +137,7 @@ export default function AppointmentForm() {
   }
 
   return (
-    <section id="appointment" className="scroll-mt-24 bg-[#FAF8F5] py-16 md:py-24 lg:py-28">
+    <section  className="scroll-mt-24 bg-[#FAF8F5] py-16 md:py-24 lg:py-28">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-16">
           {/* ---------------- LEFT: context ---------------- */}
@@ -172,7 +172,7 @@ export default function AppointmentForm() {
           </div>
 
           {/* ---------------- RIGHT: booking card ---------------- */}
-          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-2xl sm:p-8 md:p-10">
+          <div  id="appointment" className="rounded-3xl border border-slate-200 bg-white p-5 shadow-2xl sm:p-8 md:p-10">
             <div className="mb-8 flex items-center gap-3">
               <div className="inline-flex rounded-2xl bg-teal-100 p-3 text-teal-700">
                 <Stethoscope size={22} />

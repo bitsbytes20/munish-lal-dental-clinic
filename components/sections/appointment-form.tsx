@@ -184,31 +184,43 @@ export default function AppointmentForm() {
             </div>
 
             <div className="space-y-5">
-              <Field label="Full Name" icon={User} error={errors.name}>
+              <Field label="Full Name" icon={User} error={errors.name} htmlFor="appt-name">
                 <input
+                  id="appt-name"
                   type="text"
                   placeholder="e.g. Virat Kohli"
                   value={form.name}
                   onChange={(e) => update("name", e.target.value)}
                   className={inputClass(errors.name)}
+                  aria-required="true"
+                  aria-invalid={errors.name ? "true" : undefined}
+                  aria-describedby={errors.name ? "appt-name-error" : undefined}
                 />
               </Field>
 
-              <Field label="Mobile Number" icon={Phone} error={errors.phone}>
+              <Field label="Mobile Number" icon={Phone} error={errors.phone} htmlFor="appt-phone">
                 <input
+                  id="appt-phone"
                   type="tel"
                   placeholder="10-digit mobile number"
                   value={form.phone}
                   onChange={(e) => update("phone", e.target.value)}
                   className={inputClass(errors.phone)}
+                  aria-required="true"
+                  aria-invalid={errors.phone ? "true" : undefined}
+                  aria-describedby={errors.phone ? "appt-phone-error" : undefined}
                 />
               </Field>
 
-              <Field label="Treatment" icon={Stethoscope} error={errors.treatment}>
+              <Field label="Treatment" icon={Stethoscope} error={errors.treatment} htmlFor="appt-treatment">
                 <select
+                  id="appt-treatment"
                   value={form.treatment}
                   onChange={(e) => update("treatment", e.target.value)}
                   className={inputClass(errors.treatment)}
+                  aria-required="true"
+                  aria-invalid={errors.treatment ? "true" : undefined}
+                  aria-describedby={errors.treatment ? "appt-treatment-error" : undefined}
                 >
                   <option value="">Select treatment</option>
                   {TREATMENTS.map((t) => (
@@ -220,21 +232,29 @@ export default function AppointmentForm() {
               </Field>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <Field label="Preferred Date" icon={Calendar} error={errors.date}>
+                <Field label="Preferred Date" icon={Calendar} error={errors.date} htmlFor="appt-date">
                   <input
+                    id="appt-date"
                     type="date"
                     min={today}
                     value={form.date}
                     onChange={(e) => update("date", e.target.value)}
                     className={inputClass(errors.date)}
+                    aria-required="true"
+                    aria-invalid={errors.date ? "true" : undefined}
+                    aria-describedby={errors.date ? "appt-date-error" : undefined}
                   />
                 </Field>
 
-                <Field label="Preferred Time" icon={Clock} error={errors.time}>
+                <Field label="Preferred Time" icon={Clock} error={errors.time} htmlFor="appt-time">
                   <select
+                    id="appt-time"
                     value={form.time}
                     onChange={(e) => update("time", e.target.value)}
                     className={inputClass(errors.time)}
+                    aria-required="true"
+                    aria-invalid={errors.time ? "true" : undefined}
+                    aria-describedby={errors.time ? "appt-time-error" : undefined}
                   >
                     <option value="">Select time</option>
                     <optgroup label="Morning">
@@ -255,8 +275,9 @@ export default function AppointmentForm() {
                 </Field>
               </div>
 
-              <Field label="Additional Message (optional)" icon={MessageSquare}>
+              <Field label="Additional Message (optional)" icon={MessageSquare} htmlFor="appt-message">
                 <textarea
+                  id="appt-message"
                   placeholder="Tell us briefly what's bothering you..."
                   rows={3}
                   value={form.message}
@@ -300,22 +321,29 @@ function Field({
   label,
   icon: Icon,
   error,
+  htmlFor,
   children,
 }: {
   label: string;
   icon: React.ComponentType<{ size?: number }>;
   error?: boolean;
+  htmlFor: string;
   children: React.ReactNode;
 }) {
   return (
     <div>
-      <label className="mb-1.5 flex items-center gap-1.5 text-sm font-medium text-slate-700">
-        <Icon size={14} />
+      <label
+        htmlFor={htmlFor}
+        className="mb-1.5 flex items-center gap-1.5 text-sm font-medium text-slate-700"
+      >
+        <Icon size={14} aria-hidden="true" />
         {label}
       </label>
       {children}
       {error && (
-        <p className="mt-1 text-xs text-red-500">This field is required.</p>
+        <p id={`${htmlFor}-error`} role="alert" className="mt-1 text-xs text-red-500">
+          This field is required.
+        </p>
       )}
     </div>
   );

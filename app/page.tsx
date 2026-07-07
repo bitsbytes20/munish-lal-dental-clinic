@@ -14,21 +14,19 @@ import Stats from "@/components/sections/stats";
 
 export default function Home() {
   return (
-    <>
-  
+    <main>
       <Hero />
-      <Stats/>
+      <Stats />
       <About />
       <PatientJourney />
       <Treatments />
       <WhyChooseUs />
-      <Testimonials/>
-  
-      <FAQ/>
-      <CTA/>
+      <Testimonials />
+      <FAQ />
+      <CTA />
       <AppointmentForm />
-      <Contact/>
-      <Footer/>
-    </>
+      <Contact />
+      <Footer />
+    </main>
   );
 }

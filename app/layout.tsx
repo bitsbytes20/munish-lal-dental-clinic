@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/navbar";
 import WhatsAppButton from "@/components/floating/whatsapp-button";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Mobile from "@/components/floating/mobile";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
@@ -34,7 +34,7 @@ export default function RootLayout({
         {children}
 
         <WhatsAppButton />
-        <Mobile/>
+    
       </body>
     </html>
   );

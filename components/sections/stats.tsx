@@ -1,5 +1,6 @@
 import Container from "@/components/ui/container";
 import AnimatedCounter from "@/components/ui/animated-counter";
+import Reveal from "@/components/ui/reveal";
 const stats = [
   {
     value: 20,
@@ -28,6 +29,7 @@ export default function Stats() {
   return (
     <section className="border-y border-black/5 bg-[var(--background)] py-16 lg:py-24">
       <Container>
+        <Reveal>
         {/* Accent Line */}
 
         <div className="mx-auto h-[2px] w-28 rounded-full bg-[var(--gold)]" />
@@ -86,6 +88,7 @@ export default function Stats() {
         <p className="mt-12 text-center text-sm tracking-wide text-gray-500">
           Committed to safe, ethical and patient-first dental care.
         </p>
+        </Reveal>
       </Container>
     </section>
   );

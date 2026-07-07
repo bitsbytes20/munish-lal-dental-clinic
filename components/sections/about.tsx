@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/reveal";
 import {
   Award,
   ShieldCheck,
@@ -26,7 +27,7 @@ export default function About() {
             <div className="absolute -left-6 -top-6 h-32 w-32 rounded-full bg-[var(--teal-light)] opacity-40 blur-3xl sm:-left-10 sm:-top-10 sm:h-60 sm:w-60" />
 
             <div className="relative overflow-hidden rounded-[36px] shadow-xl group">
-
+             <Reveal>
               <Image
                 src="/images/doctor.jpg"
                 alt="Dr. Munish Lal"
@@ -34,6 +35,7 @@ export default function About() {
                 height={850}
                 className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
+              </Reveal>
 
             </div>
 
@@ -62,7 +64,7 @@ export default function About() {
             </p>
 
             {/* Description */}
-
+<Reveal delay={0.15}>
             <p className="mt-6 max-w-xl text-base leading-7 text-gray-600 sm:mt-8 sm:text-lg sm:leading-8">
               With more than two decades of clinical experience,
               Dr. Munish Lal has helped thousands of patients
@@ -71,7 +73,7 @@ export default function About() {
               treatment is delivered with precision, compassion,
               and a commitment to long-term oral health.
             </p>
-
+</Reveal>
             {/* Highlights */}
 
             <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6">

@@ -32,7 +32,7 @@ export default function CTA() {
             </a>
 
             <a
-              href="tel:+919259032949"
+              href="tel:+919058781243"
               className="inline-flex items-center justify-center gap-3 rounded-full border border-white/40 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-teal-700"
             >
               <Phone size={20} />

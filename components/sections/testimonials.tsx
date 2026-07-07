@@ -6,7 +6,7 @@ const testimonials = [
     name: "Rahul Sharma",
     treatment: "Root Canal Treatment",
     review:
-      "The entire treatment was painless and professionally handled. Dr. Munish Lal explained every step and made me feel completely comfortable.",
+      "The entire treatment was painless and professionally handled. Dr. Shubhra explained every step and made me feel completely comfortable.",
   },
   {
     name: "Priya Verma",

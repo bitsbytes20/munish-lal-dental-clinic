@@ -32,9 +32,9 @@ export default function Mobile() {
   }, []);
 
   const whatsappLink =
-    "https://wa.me/919259032949?text=" +
+    "https://wa.me/919058781243?text=" +
     encodeURIComponent(
-      "Hello Dr. Munish Lal Dental Clinic,\n\nI would like to book an appointment.\nPlease let me know the available timings.\n\nThank you."
+      "Hello Dr. Shubhra's Dental Clinic,\n\nI would like to book an appointment.\nPlease let me know the available timings.\n\nThank you."
     );
 
   return (

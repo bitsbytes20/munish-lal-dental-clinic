@@ -126,7 +126,7 @@ export default function LocalBusinessSchema() {
       name: taglineCity,
     },
 
-    medicalSpecialty: taglineSpecialty || "Dentistry",
+    medicalSpecialty: "Dentistry",
 
     openingHoursSpecification: [
       {
@@ -144,7 +144,7 @@ export default function LocalBusinessSchema() {
     // Solo-practitioner clinics commonly model the practicing dentist as
     // "founder" — switch to an array under "employee" if you ever add a
     // second dentist to the clinic.
-   employee: [
+   founder: [
   {
     "@type": "Dentist",
     name: clinic.doctor.name,

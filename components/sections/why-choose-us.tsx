@@ -12,7 +12,7 @@ import Container from "@/components/ui/container";
 const features = [
   {
     icon: Award,
-    title: "20+ Years Experience",
+    title: "10+ Years Experience",
     description:
       "Providing trusted dental care with years of clinical expertise and patient satisfaction.",
   },
@@ -50,7 +50,10 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className=" scroll-mt-24 bg-[#FAF8F5] py-28">
+  <section
+  id="why-us"
+  className="scroll-mt-24 bg-[#FAF8F5] pt-12 pb-24 md:pt-16 md:pb-24 lg:pt-16 lg:pb-28"
+>
       <Container>
 
         <div className="mx-auto max-w-3xl text-center">

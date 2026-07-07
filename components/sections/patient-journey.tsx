@@ -16,7 +16,7 @@ const steps = [
   {
     icon: Stethoscope,
     title: "Dental Consultation",
-    text: "Meet Dr. Munish Lal for a detailed examination and receive a personalized treatment plan.",
+    text: "Meet Dr. Shubhra for a detailed examination and receive a personalized treatment plan.",
   },
   {
     icon: Sparkles,

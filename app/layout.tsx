@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Munish Lal Dental Clinic",
+  title: " Dr. Shubhra Dental Clinic",
   description: "Crafting Confident Smiles.",
 };
 

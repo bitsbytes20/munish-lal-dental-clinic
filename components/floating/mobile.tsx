@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Calendar } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-
+import { clinic, phoneLink } from "@/data/clinic";
 export default function Mobile() {
   const [visible, setVisible] = useState(false);
 
@@ -52,7 +52,7 @@ export default function Mobile() {
   {/* Call */}
 
   <a
-    href="tel:+919259032949"
+   href={phoneLink}
     className="group flex flex-col items-center gap-2 rounded-2xl p-2 transition-all duration-300 hover:bg-[var(--teal-light)]"
   >
     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--teal)] text-white transition-transform duration-300 group-hover:scale-110">

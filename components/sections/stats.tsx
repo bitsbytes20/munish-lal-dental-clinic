@@ -3,7 +3,7 @@ import AnimatedCounter from "@/components/ui/animated-counter";
 import Reveal from "@/components/ui/reveal";
 const stats = [
   {
-    value: 20,
+    value: 10,
     suffix: "+",
     label: "Years of Experience",
   },

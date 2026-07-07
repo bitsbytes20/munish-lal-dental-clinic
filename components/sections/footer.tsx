@@ -13,20 +13,24 @@ import {
 
 import Container from "@/components/ui/container";
 
+import {
+  clinic,
+  phoneLink,
+  mailtoLink,
+  whatsappLink,
+} from "@/data/clinic";
+
 export default function Footer() {
   return (
     <footer className="bg-teal-900 text-white">
-
       <Container>
-
         <div className="grid gap-10 py-14 sm:gap-12 md:grid-cols-2 md:py-20 lg:grid-cols-5">
 
           {/* Brand */}
 
           <div>
-
             <h2 className="text-2xl font-bold sm:text-3xl">
-              Dr. Munishlal Dental Clinic
+              {clinic.name}
             </h2>
 
             <p className="mt-5 leading-7 text-teal-100">
@@ -54,18 +58,18 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://wa.me/919259032949"
+                href={whatsappLink()}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-white/10 p-3 transition hover:bg-green-500"
               >
                 <FaWhatsapp />
               </a>
 
             </div>
-
           </div>
 
-          {/* Links */}
+          {/* Quick Links */}
 
           <div>
 
@@ -74,15 +78,10 @@ export default function Footer() {
             </h3>
 
             <ul className="mt-6 space-y-4 text-teal-100">
-
               <li><a href="#">Home</a></li>
-
               <li><a href="#about">About</a></li>
-
               <li><a href="#treatments">Treatments</a></li>
-
               <li><a href="#contact">Contact</a></li>
-
             </ul>
 
           </div>
@@ -96,17 +95,11 @@ export default function Footer() {
             </h3>
 
             <ul className="mt-6 space-y-4 text-teal-100">
-
               <li>Dental Implants</li>
-
               <li>Root Canal</li>
-
               <li>Braces</li>
-
               <li>Teeth Whitening</li>
-
               <li>Emergency Care</li>
-
             </ul>
 
           </div>
@@ -121,36 +114,44 @@ export default function Footer() {
 
             <div className="mt-6 space-y-5 text-teal-100">
 
-             <div className="flex gap-3">
-  <Phone size={18} />
-  <a
-    href="tel:+919259032949"
-    className="transition hover:text-teal-300"
-  >
-    +91 92590 32949
-  </a>
-</div>
-
               <div className="flex gap-3">
-                <Mail size={18} />
-               <a
-  href="mailto:bitsbytes2006@gmail.com"
-  className="transition hover:text-teal-300"
->
-  bitsbytes2006@gmail.com
-</a>
+                <Phone size={18} />
+
+                <a
+                  href={phoneLink}
+                  className="transition hover:text-teal-300"
+                >
+                  {clinic.contact.phoneDisplay}
+                </a>
+
               </div>
 
               <div className="flex gap-3">
+
+                <Mail size={18} />
+
+                <a
+                  href={mailtoLink}
+                  className="transition hover:text-teal-300"
+                >
+                  {clinic.contact.email}
+                </a>
+
+              </div>
+
+              <div className="flex gap-3">
+
                 <MapPin size={18} />
-             <a
-  href="https://maps.google.com/?q=Anand+Ashram+Road+Civil+Lines+Bareilly+243005"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="transition hover:text-teal-300"
->
-  Anand Ashram Road, Civil Lines, Bareilly
-</a>
+
+                <a
+                  href={clinic.address.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-teal-300"
+                >
+                  {clinic.address.lines.join(", ")}
+                </a>
+
               </div>
 
             </div>
@@ -171,19 +172,21 @@ export default function Footer() {
 
               <div>
 
-                Monday – Saturday
+                {clinic.hours.days}
 
-                <br /><br />
+                <br />
+                <br />
 
-                10 AM – 1 PM
+                {clinic.hours.morning}
 
                 <br />
 
-                3 PM – 7 PM
+                {clinic.hours.evening}
 
-                <br /><br />
+                <br />
+                <br />
 
-                Sunday Closed
+                {clinic.hours.closedNote}
 
               </div>
 
@@ -195,7 +198,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 py-8 text-center text-sm text-teal-200">
 
-          © 2026 Dr. Munishlal Dental Clinic. All Rights Reserved.
+          © {new Date().getFullYear()} {clinic.name}. All Rights Reserved.
 
         </div>
 

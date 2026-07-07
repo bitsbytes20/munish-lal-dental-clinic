@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 import Container from "@/components/ui/container";
+import { clinic, whatsappLink } from "@/data/clinic";
 
 /**
  * AppointmentForm
@@ -24,12 +25,10 @@ import Container from "@/components/ui/container";
  * headings, text-slate-600 body copy, teal-700 accents, rounded-3xl
  * white cards with border-slate-200).
  *
- * Replace CLINIC_WHATSAPP_NUMBER with the real WhatsApp number
- * (country code, no + or spaces, e.g. "919259032949").
+ * Clinic name and WhatsApp number now come from "@/data/clinic" —
+ * edit that file to rebrand this form for a different clinic.
  * -----------------------------------------------------------------------
  */
-
-const CLINIC_WHATSAPP_NUMBER = "919259032949"; // TODO: replace with real number
 
 const TREATMENTS = [
   "General Consultation",
@@ -117,7 +116,7 @@ export default function AppointmentForm() {
     });
 
     const lines = [
-      "🦷 *Dr. Munish Lal Dental Clinic*",
+      `🦷 *${clinic.name}*`,
       "",
       "*New Appointment Request*",
       "",
@@ -134,8 +133,7 @@ export default function AppointmentForm() {
 
     lines.push("", "Please confirm the appointment.");
 
-    const text = encodeURIComponent(lines.join("\n"));
-    window.open(`https://wa.me/${CLINIC_WHATSAPP_NUMBER}?text=${text}`, "_blank");
+    window.open(whatsappLink(lines.join("\n")), "_blank");
   }
 
   return (
@@ -181,7 +179,7 @@ export default function AppointmentForm() {
               </div>
               <div>
                 <p className="font-bold text-slate-900">Appointment Request</p>
-                <p className="text-sm text-slate-600">Dr. Munish Lal Dental Clinic</p>
+                <p className="text-sm text-slate-600">{clinic.name}</p>
               </div>
             </div>
 

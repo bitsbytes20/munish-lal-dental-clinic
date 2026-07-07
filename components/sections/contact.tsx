@@ -3,53 +3,44 @@ import {
   Phone,
   Mail,
   Clock3,
-  
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Container from "@/components/ui/container";
+import { clinic, phoneLink, mailtoLink, whatsappLink } from "@/data/clinic";
 
 const contactCards = [
   {
     icon: MapPin,
     title: "Visit Our Clinic",
-    description: `Anand Ashram Road
-Opposite Mental Hospital
-Civil Lines
-Bareilly, Uttar Pradesh 243005`,
-    link: "https://maps.google.com",
+    description: clinic.address.lines.join("\n"),
+    link: clinic.address.mapsLink,
     button: "Get Directions",
   },
   {
     icon: Phone,
     title: "Call Us",
-    description: "+91 92590 32949",
-    link: "tel:+919259032949",
+    description: clinic.contact.phoneDisplay,
+    link: phoneLink,
     button: "Call Now",
   },
   {
     icon: FaWhatsapp,
     title: "WhatsApp",
-    description: "+91 92590 32949",
-    link: "https://wa.me/919259032949",
+    description: clinic.contact.phoneDisplay,
+    link: whatsappLink(),
     button: "Chat Now",
   },
   {
     icon: Mail,
     title: "Email",
-    description: "bitsbytes2006@gmail.com",
-    link: "mailto:bitsbytes2006@gmail.com",
+    description: clinic.contact.email,
+    link: mailtoLink,
     button: "Send Email",
   },
   {
     icon: Clock3,
     title: "Clinic Hours",
-    description: `Monday – Saturday
-
-10:00 AM – 1:00 PM
-
-3:00 PM – 7:00 PM
-
-Sunday : Closed`,
+    description: `${clinic.hours.days}\n\n${clinic.hours.morning}\n\n${clinic.hours.evening}\n\n${clinic.hours.closedNote}`,
   },
 ];
 
@@ -120,7 +111,7 @@ export default function Contact() {
 
           <iframe
             title="Clinic Location"
-            src="https://www.google.com/maps?q=Anand+Ashram+Road,+Civil+Lines,+Bareilly,+Uttar+Pradesh+243005&output=embed"
+            src={clinic.address.mapsEmbedSrc}
             width="100%"
             height="320"
             loading="lazy"

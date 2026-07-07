@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Container from "../ui/container";
 import { Calendar, Phone, Menu, X } from "lucide-react";
-
+import { clinic, phoneLink } from "@/data/clinic";
+import Image from "next/image";
 const links = [
   { name: "Home", href: "#" },
   { name: "About", href: "#about" },
   { name: "Treatments", href: "#treatments" },
-  { name: "Gallery", href: "#gallery" },
+    { name: "Why Choose Us", href: "#why-us" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -17,7 +18,7 @@ const mobileLinks = [
   { name: "Home", href: "#" },
   { name: "About", href: "#about" },
   { name: "Treatments", href: "#treatments" },
-  { name: "Gallery", href: "#gallery" },
+   { name: "Why Choose Us", href: "#journey" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "FAQ", href: "#faq" },
   { name: "Appointment", href: "#appointment" },
@@ -25,7 +26,7 @@ const mobileLinks = [
 ];
 
 // Sections tracked for scroll-spy. "#" (Home) is treated as the top of the page.
-const sectionIds = ["about", "treatments", "gallery", "testimonials", "faq", "appointment", "contact"];
+const sectionIds = ["about", "treatments", "why-us", "testimonials", "faq", "appointment", "contact"];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -110,16 +111,32 @@ export default function Navbar() {
 
           {/* Logo */}
 
-          <Link href="#" className="flex flex-col" onClick={closeMenu}>
-            <span className="text-lg font-bold tracking-tight sm:text-2xl">
-              Munish Lal
-            </span>
+  <Link
+  href="#"
+  className="group flex items-center gap-3"
+  onClick={closeMenu}
+>
+  <div className="overflow-hidden rounded-full border border-[var(--teal)]/15 bg-white shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md">
+    <Image
+      src={clinic.branding.logo}
+      alt={clinic.shortName}
+      width={54}
+      height={54}
+      priority
+      className="h-[54px] w-[54px] object-cover"
+    />
+  </div>
 
-            <span className="text-xs uppercase tracking-[0.1em] text-gray-500 sm:text-sm sm:tracking-[0.15em]">
-              Dental Clinic
-            </span>
-          </Link>
+  <div className="flex flex-col leading-tight">
+    <span className="text-lg font-bold tracking-tight sm:text-2xl">
+      {clinic.shortName}
+    </span>
 
+    <span className="text-xs uppercase tracking-[0.15em] text-gray-500 sm:text-sm">
+      {clinic.tagline}
+    </span>
+  </div>
+</Link>
           {/* Desktop Navigation */}
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -151,7 +168,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
 
             <a
-              href="tel:+919259032949"
+              href={phoneLink}
               className="flex items-center gap-2 rounded-full border border-black/80 px-4 py-2.5 text-sm font-medium transition hover:border-[var(--teal)] hover:bg-[var(--teal-light)] hover:text-[var(--teal)]"
             >
               <Phone size={16} />
@@ -225,7 +242,7 @@ active:scale-95"
                 </Link>
 
                 <a
-                  href="tel:+919259032949"
+                  href={phoneLink}
                   onClick={closeMenu}
                   className="flex w-full items-center justify-center gap-2 rounded-full border border-black/80 px-5 py-3 transition hover:border-[var(--teal)] hover:bg-[var(--teal-light)] hover:text-[var(--teal)]"
                 >
